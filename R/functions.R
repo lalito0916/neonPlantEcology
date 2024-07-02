@@ -221,6 +221,8 @@ npe_longform <- function(neon_div_object,
 
   neon_div_object <- npe_update_subplots(neon_div_object) |>
     npe_eventID_fixer(verbose = verbose)
+    dplyr::filter(heightPlantOver300cm == "N")
+
 
   neon_div_object$div_1m2Data <-
     neon_div_object$div_1m2Data |>
@@ -528,6 +530,8 @@ npe_groundcover <- function(neon_div_object,
 
   neon_div_object <- npe_update_subplots(neon_div_object) |>
     npe_eventID_fixer(verbose = verbose)
+    dplyr::filter(heightPlantOver300cm == "N")
+
 
   neon_div_object$div_1m2Data <-
     neon_div_object$div_1m2Data |>
@@ -724,6 +728,8 @@ npe_heights <- function(neon_div_object,
 
   neon_div_object <- npe_update_subplots(neon_div_object) |>
     npe_eventID_fixer(verbose = verbose)
+    dplyr::filter(heightPlantOver300cm == "N")
+
 
   if(scale == "plot"){
     full_on_height <- neon_div_object$div_1m2Data |>
